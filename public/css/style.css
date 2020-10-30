@@ -62,10 +62,6 @@ textarea:focus {
     text-align: center;
 }
 
-.bloc-aligner {
-    display: flex;
-}
-
 
 /**** BTN No. 4 ****/
 
@@ -388,17 +384,6 @@ footer {
 }
 
 
-/* page de profil */
-
-.imageProfil {
-    margin: 0 auto 0 auto;
-    display: block;
-    border-radius: 50%;
-    width: 10vw;
-    min-width: 5vh;
-}
-
-
 /* page connection / inscription / contact */
 
 .formContainer {
@@ -563,17 +548,29 @@ textarea {
 }
 
 .imgFigure {
-    margin: 0px 10px 0 10px;
+    margin: 0px 10px 50px 10px;
+    height: 225px;
 }
 
-figcaption h4 {
-    background: #173e46;
-    padding: 10px;
-    bottom: 65px;
+figcaption {
     position: relative;
+    bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    background: #173e46;
     color: white;
-    font-weight: 100;
     opacity: 0.8;
+    padding: 0px 5px 0 5px;
+}
+
+figcaption:hover {
+    opacity: 1;
+    transform: scaleY(1.05);
+    transition: all 0.5s;
+}
+
+figcaption:hover .ajoutListe {
+    display: block;
 }
 
 .imgFigure img:hover {
@@ -582,8 +579,117 @@ figcaption h4 {
     transition: all .5s;
 }
 
+.ajoutListe {
+    margin: 0 0 0 0;
+    background: yellow;
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.ajoutListe:hover {
+    background: #19afce;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+#boutonHover {
+    position: absolute;
+    right: 424px;
+    bottom: 500px;
+}
+
 
 /* page profile */
+
+.bloc-aligner {
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 40vh;
+}
+
+.formulaire-image {
+    margin: 0 auto 0 auto;
+    width: 310px;
+}
+
+#formulaireUpload input {
+    margin: 0 auto 0 auto;
+    background: #f9f5eb;
+}
+
+#formulaireUpload {
+    display: inline-flex;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#file-upload-button input {
+    background-color: black!important;
+}
+
+.boutonUpload {
+    display: none !important;
+}
+
+#boutonEnvoie {
+    display: none !important;
+}
+
+.imageProfil {
+    margin: 0 auto 0 auto;
+    display: block;
+    border-radius: 50%;
+    width: 25vw;
+    min-width: 5vh;
+}
+
+#image-profil {
+    width: 40px;
+}
+
+#centrageBouton {
+    text-align: center;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    text-align: center;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 
 #mesJeux {
     margin-top: 10em;
@@ -629,6 +735,18 @@ tr:hover {
 
 td:hover {
     background-color: white;
+}
+
+@media screen and (min-width:768px) {
+    .imageProfil {
+        width: 20vh;
+    }
+}
+
+@media screen and (min-width:425px) {
+    .imageProfil {
+        width: 20vh;
+    }
 }
 
 

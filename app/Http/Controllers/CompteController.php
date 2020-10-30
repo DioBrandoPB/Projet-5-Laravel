@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class CompteController extends Controller
 {
     public function accueil() {
@@ -21,5 +21,25 @@ class CompteController extends Controller
 
         auth()->logout();
         return redirect('/');
+    }
+
+    public function update_avatar(Request $request){
+
+        $request->validate([
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+        ]);
+
+        $utilisateur = Auth::user();
+
+        $avatarName = $utilisateur->id.'_avatar'.time().'.'.request()->avatar->getClientOriginalExtension();
+
+        $request->avatar->storeAs('avatars',$avatarName);
+
+        $utilisateur->avatar = $avatarName;
+        $utilisateur->save();
+
+        return back()
+            ->with('success','You have successfully upload image.');
+
     }
 }

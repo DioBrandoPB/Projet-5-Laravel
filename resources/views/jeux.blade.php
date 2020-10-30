@@ -20,7 +20,7 @@
             <div class="rechercheImg">
                 <figure class="imgFigure">
                     <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
+                    <figcaption class="titrejeux">Titre jeux </figcaption>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
                         ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
                         vitae similique est?</p>
@@ -36,7 +36,7 @@
 
                 <figure class="imgFigure">
                     <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
+                    <figcaption class="titrejeux">Titre jeux </figcaption>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
                         ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
                         vitae similique est?</p>

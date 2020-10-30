@@ -15,6 +15,7 @@
 Route::get('/', 'Test@index');
 Route::get('/jeux', 'Test@jeux');
 Route::get('/mon-compte', 'CompteController@accueil');
+Route::post('mon-compte', 'CompteController@update_avatar');
 Route::get('/inscription', 'InscriptionController@formulaire');
 Route::post('/inscription', 'InscriptionController@traitement');
 Route::get('/contact', 'Test@contact');

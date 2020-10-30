@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Utilisateur;
 class ConnexionController extends Controller
 {
     public function formulaire()
@@ -20,7 +20,6 @@ class ConnexionController extends Controller
             'password' => ['required'],
         ]);
     
-        // À faire : vérification que l'email et le mot de passe sont corrects.
     
         $resultat = auth()->attempt([
             'email' => request('email'),

@@ -56,6 +56,7 @@
     </div>
 </footer>
 
+
 <script>
     // smooth scroll
     (function() {
@@ -109,4 +110,4 @@
             });
         }
     })();
-</script>
+</scrip>

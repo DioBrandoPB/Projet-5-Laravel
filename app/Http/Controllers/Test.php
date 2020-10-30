@@ -30,10 +30,7 @@ class Test extends Controller
         $titre = "Profile";
         return \view('profile', ['titre' => $titre]);
     }
-    public function inscription() {
-        $titre = "Inscription";
-        return \view('inscription', ['titre' => $titre]);
-    }
+
     public function contact() {
         $titre = "Contact";
         return \view('contact', ['titre' => $titre]);

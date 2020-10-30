@@ -25,12 +25,18 @@
                 <div class="menuDeroulant">
                     <span class="menuBtn"><i class="far fa-user"></i>
                         <div class="index">
+                            @if( Auth::user())
                             <li>
-                                <div class="sousMenu"><a href="connection">Connexion</a><br></div>
+                                <div class="sousMenu"><a href="mon-compte">Profil</a><br></div>
+                            </li>
+                            @else
+                            <li>
+                                <div class="sousMenu"><a href="connexion">Connexion</a><br></div>
                             </li>
                             <li>
                                 <div class="sousMenu"><a href="inscription">Inscription</a></div>
                             </li>
+                            @endif
                         </div>
                     </span>
                 </div>

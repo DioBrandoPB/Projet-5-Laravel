@@ -58,6 +58,14 @@ textarea:focus {
     transform: rotate(360deg);
 }
 
+.center {
+    text-align: center;
+}
+
+.bloc-aligner {
+    display: flex;
+}
+
 
 /**** BTN No. 4 ****/
 

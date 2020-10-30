@@ -14,8 +14,12 @@
 
 Route::get('/', 'Test@index');
 Route::get('/jeux', 'Test@jeux');
-Route::get('/profile', 'Test@profile');
-Route::get('/inscription', 'Test@inscription');
+Route::get('/mon-compte', 'CompteController@accueil');
+Route::get('/inscription', 'InscriptionController@formulaire');
+Route::post('/inscription', 'InscriptionController@traitement');
 Route::get('/contact', 'Test@contact');
 Route::get('/connection', 'Test@connection');
 Route::get('/prochainement', 'Test@prochainement');
+Route::get('/connexion', 'ConnexionController@formulaire');
+Route::post('/connexion', 'ConnexionController@traitement');
+Route::get('/deconnexion', 'CompteController@deconnexion');

@@ -1,153 +1,129 @@
 @extends('layout')
 @section('container')
-<div class="content">
-    <ul>
-        @if (request('game'))
-        @foreach ($response->results as $game)
-        <li><a href="/games/{{ $game->slug }}">{{ $game->name }}</a></li>
-        @endforeach
-        @endif
-    </ul>
-</div>
-<section id="jeux">
+
+<section id="futurJeux">
     <div class="bloc">
-        <h2>Parcourir les jeux</h2>
+        <h2>Jeux</h2>
         <img src="img/soulignement.png" alt="" class="soulignement">
-        <div class="recherche">
-            <input type="search" id="jeuxRecherche" name="recherche">
-            <button class="boutons btnBasique"><span><i class="fas fa-search"></i></span></button>
-
-            <div class="rechercheImg">
+        <div class="rechercheJeux">
+            <input type="text" id="jeux" placeholder="Rechercher un Jeux" />
+            <button id="soumettre" class="boutons btnBasique"><span><i class="fas fa-search"></i></span></button>
+        </div>
+        <div class="blocImgRecherche">
+            <div class="blocImg">
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption class="titrejeux">Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
-
-                </figure>
-
-                <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption class="titrejeux">Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
                 <figure class="imgFigure">
-                    <img src="img/imgtest.jpg" alt="image jeu">
-                    <figcaption>Titre jeux </figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odio sequi eius ad velit rem
-                        ducimus pariatur, consequuntur saepe a, quos neque molestiae nostrum eveniet perspiciatis, quas
-                        vitae similique est?</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finir" />à terminer</label>
-                        <label>
-                            <input type="checkbox" class="radio" value="1" name="finis" />est terminer</label>
-
-                    </div>
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
+                </figure>
+                <figure class="imgFigure">
+                    <form class="register-form" action="/ajout" method="post">
+                        {{{ csrf_field() }}}
+                        <img src="img/imgtest.jpg" alt="image jeu" class="images">
+                        <figcaption>
+                            <input type="text" name="nom" class="jeuxForm" readonly />
+                            <p><a href="" title="Ajouter à ma liste"><button class="ajoutListe"><i
+                                            class="fas fa-plus"></i></button></a></p>
+                            <p><span class="datedesortie"></span></p>
+                        </figcaption>
+                    </form>
                 </figure>
             </div>
         </div>
-</section>
+    </div>
 
+</section>
+<script src="js/Jeux.js"></script>
+<script src="js/Main.js"></script>
 @endsection

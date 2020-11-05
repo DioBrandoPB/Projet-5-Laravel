@@ -26,10 +26,6 @@ class Test extends Controller
         $titre = "Jeux";
         return \view('jeux', ['titre' => $titre]);
     }
-    public function profile() {
-        $titre = "Profile";
-        return \view('profile', ['titre' => $titre]);
-    }
 
     public function contact() {
         $titre = "Contact";

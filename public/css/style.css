@@ -531,7 +531,7 @@ textarea {
 }
 
 
-/* page futurJeux */
+/* page Prochainement / Jeux*/
 
 .blocImg {
     display: flex;
@@ -599,6 +599,20 @@ figcaption:hover .ajoutListe {
     position: absolute;
     right: 424px;
     bottom: 500px;
+}
+
+.rechercheJeux input {
+    width: 250px;
+    padding: 11px;
+    border-radius: 3px;
+}
+
+.blocImgRecherche {
+    visibility: hidden;
+}
+
+.rechercheJeux {
+    text-align: center;
 }
 
 

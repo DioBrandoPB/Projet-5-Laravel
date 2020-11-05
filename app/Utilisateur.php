@@ -21,4 +21,8 @@ class Utilisateur extends Model implements Authenticatable
     {
         return $this->mot_de_passe;
     }
+    public function liste()
+    {
+        return $this->hasOne(‘App\Liste’);
+    }
 }
